@@ -1,0 +1,8 @@
+# installing conda naviagtor
+# create virtual Environment
+--> conda create -n yolo_env python=3.8
+--> conda activate yolo_env
+# installing necessary packages
+--> pip install flask tensorflow werkzeug pickle numpy
+# run main 
+ --> python setup.py

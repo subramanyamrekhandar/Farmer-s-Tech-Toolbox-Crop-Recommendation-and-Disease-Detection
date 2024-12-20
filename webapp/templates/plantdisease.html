@@ -1,0 +1,63 @@
+{% extends 'base.html' %} {% block title %}Plant Disease Detection{% endblock title %} 
+
+{% block content %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+       
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}"> -->
+
+    <script src="https://kit.fontawesome.com/de6146db41.js" crossorigin="anonymous"></script>
+    
+
+    <link rel="apple-touch-icon-precomposed" href="{{url_for('static', filename='img/logo.svg')}}" type="image/svg+xml">
+    
+
+</head>
+<body style="margin-top: 100px;"></body>
+
+
+<div class="row-sm p-sm-5">
+    <div class="col-sm-12 p-sm-5">
+        <p class="text-center">
+            <h3 class="text-center" style="font-size: 25px;">
+                Plant Classification
+            </h3>
+            <p class="text-center">
+                Upload a image of plant to know what type of disease a plant has
+            </p>
+        </p>
+        <p>
+            <h4 class="text-center">
+                Upload Image file
+            </h4>
+        </p>
+        <div class="d-flex justify-content-center">
+            <form method=post enctype=multipart/form-data>
+                <input type=file name=file>
+                <input type=submit value=Upload style="padding: 10px 10px; border: 1px solid; border-radius: 20px;">
+            </form>
+        </div>
+    </div>
+    <h1 style="text-align: center;">Result:<b style="color: blueviolet;">{{corrected_result}}</b> </h1>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>
+{% endblock content %}
